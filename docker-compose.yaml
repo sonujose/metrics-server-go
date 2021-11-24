@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server-response-metrics:
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - APP_PORT=7006
+      - GIN_MODE=release
+      - ROOT_PATH=server
+    ports:
+      - "7006:7006"
